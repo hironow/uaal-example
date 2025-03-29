@@ -1,5 +1,10 @@
 .DS_Store
 
 # build result
-iosBuild/
-androidBuild/
+UnityProject/iosBuild/**
+!UnityProject/iosBuild/
+!UnityProject/iosBuild/**/.gitkeep
+
+UnityProject/androidBuild/**
+!UnityProject/androidBuild/
+!UnityProject/androidBuild/**/.gitkeep
