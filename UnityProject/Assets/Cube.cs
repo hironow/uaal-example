@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using UnityEngine.UI;
 using UnityEngine;
 
-#if UNITY_IOS || UNITY_TVOS
+#if UNITY_IOS
 public class NativeAPI {
     [DllImport("__Internal")]
     public static extern void showHostMainWindow(string lastStringColor);
@@ -55,7 +55,7 @@ public class Cube : MonoBehaviour
             AppendToText("Exception during showHostMainWindow");
             AppendToText(e.Message);
         }
-#elif UNITY_IOS || UNITY_TVOS
+#elif UNITY_IOS
         NativeAPI.showHostMainWindow(lastStringColor);
 #endif
     }
